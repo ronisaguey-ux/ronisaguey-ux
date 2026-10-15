@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Roni Saguey — AI Systems Engineer</title>
+<style>
+  @page { size: Letter; margin: 0.5in 0.6in; }
+  * { box-sizing: border-box; }
+  body {
+    font-family: "Inter", "Helvetica Neue", Arial, sans-serif;
+    color: #16181d; margin: 0; font-size: 10.2pt; line-height: 1.42;
+    -webkit-font-smoothing: antialiased;
+  }
+  a { color: #1a56db; text-decoration: none; }
+  /* ── Header ───────────────────────────────── */
+  header { border-bottom: 2.5px solid #16181d; padding-bottom: 9px; margin-bottom: 13px; }
+  h1 { font-size: 21pt; margin: 0 0 2px; letter-spacing: -0.6px; font-weight: 700; }
+  .role { font-size: 10.5pt; color: #4a4f5a; font-weight: 500; margin-bottom: 5px; }
+  .contact { font-size: 9pt; color: #4a4f5a; }
+  .contact span:not(:last-child)::after { content: "  ·  "; color: #b6bac2; }
+  /* ── Sections ─────────────────────────────── */
+  h2 {
+    font-size: 9.6pt; text-transform: uppercase; letter-spacing: 1.5px;
+    margin: 15px 0 7px; padding-bottom: 3px; border-bottom: 1px solid #d8dbe1;
+    color: #16181d; font-weight: 700;
+  }
+  .summary { font-size: 10pt; color: #2b2f38; }
+  /* ── Project cards ────────────────────────── */
+  .proj { margin-bottom: 10px; page-break-inside: avoid; }
+  .proj-head { display: flex; justify-content: space-between; align-items: baseline; gap: 10px; }
+  .proj-title { font-weight: 700; font-size: 10.6pt; }
+  .proj-meta { font-size: 8.5pt; color: #6b7280; white-space: nowrap; }
+  .stack {
+    font-size: 8.6pt; color: #4a4f5a; margin: 1px 0 3px;
+    font-family: "SF Mono", ui-monospace, Menlo, monospace;
+  }
+  ul { margin: 3px 0 0; padding-left: 15px; }
+  li { margin-bottom: 2.5px; }
+  .tag {
+    display: inline-block; font-size: 7.6pt; font-weight: 600; letter-spacing: .4px;
+    padding: 1px 6px; border-radius: 3px; margin-left: 6px; vertical-align: 1px;
+    background: #e8f0fe; color: #1a56db; text-transform: uppercase;
+  }
+  .tag.award { background: #fef3c7; color: #92400e; }
+  .tag.stars { background: #f3f4f6; color: #374151; }
+  /* ── Skills grid ──────────────────────────── */
+  .grid { display: grid; grid-template-columns: 148px 1fr; gap: 5px 12px; font-size: 9.7pt; }
+  .grid dt { font-weight: 700; color: #16181d; }
+  .grid dd { margin: 0; color: #2b2f38; }
+  .footnote { font-size: 8.4pt; color: #6b7280; margin-top: 4px; }
+  /* ── Print ────────────────────────────────── */
+  @media print { body { font-size: 10pt; } a { color: #16181d; } }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Roni Saguey</h1>
+  <div class="role">AI Systems Engineer — agent infrastructure, LLM tooling, applied computer vision</div>
+  <div class="contact">
+    <span>github.com/ronisaguey-ux</span>
+    <span>roni.saguey@gmail.com</span>
+    <span>South Florida</span>
+  </div>
+</header>
+
+<section>
+  <h2>Summary</h2>
+  <p class="summary">
+    Self-taught engineer building production agent infrastructure: LLM API routers, context-compression
+    systems, agent-memory engines, and computer-vision pipelines. Ship end-to-end — architecture,
+    implementation, tests, and deployment — across Python, JavaScript and shell. Multiple competition
+    entries in applied AI, including national hackathons in computer vision and agricultural ML.
+  </p>
+</section>
+
+<section>
+  <h2>Selected Projects</h2>
+
+  <div class="proj">
+    <div class="proj-head">
+      <span class="proj-title">Webchat-to-API Harness<span class="tag stars">★ 9</span></span>
+      <span class="proj-meta">Open source</span>
+    </div>
+    <div class="stack">JavaScript · Node · Puppeteer · OpenAI + Anthropic API schemas</div>
+    <ul>
+      <li>OpenAI- <em>and</em> Anthropic-compatible HTTP API backed by a real webchat tab, so any
+          agentic client (Aider, LiteLLM, Claude Code via <code>ANTHROPIC_BASE_URL</code>) can drive
+          a session you own.</li>
+      <li>Full tool-call support — file read/write and bash execution surfaced through the chat UI.</li>
+    </ul>
+  </div>
+
+  <div class="proj">
+    <div class="proj-head">
+      <span class="proj-title">free-ai — Multi-Provider LLM Router<span class="tag stars">★ 2</span></span>
+      <span class="proj-meta">Open source</span>
+    </div>
+    <div class="stack">JavaScript · zero runtime dependencies</div>
+    <ul>
+      <li>One local endpoint in front of every free LLM tier: ranked model list, automatic fallback,
+          and a linear per-model cooldown. Serves 50+ models across 10 providers.</li>
+      <li>Zero dependencies — deliberately dependency-free so it runs anywhere with a Node binary.</li>
+    </ul>
+  </div>
+
+  <div class="proj">
+    <div class="proj-head">
+      <span class="proj-title">AxiomMem — Agent Memory Engine<span class="tag award">Hackathon entry</span></span>
+      <span class="proj-meta">Agent Memory Challenge 2026</span>
+    </div>
+    <div class="stack">Python · FastAPI · SQLite (WAL) · embeddings</div>
+    <ul>
+      <li>High-performance memory system engineered for execution continuity, temporal resolution and
+          zero-loss retrieval across coding and textual-memory tracks.</li>
+      <li>Built and verified end-to-end against the live competition API: contract compliance,
+          tenant isolation, idempotency, and large-scale ingestion.</li>
+    </ul>
+  </div>
+
+  <div class="proj">
+    <div class="proj-head">
+      <span class="proj-title">Agentic Visual Inspector<span class="tag award">Competition entry</span></span>
+      <span class="proj-meta">OpenCV AI Competition 2026</span>
+    </div>
+    <div class="stack">Python · OpenCV 5 · YOLOv10 ONNX · LLM reasoning loop</div>
+    <ul>
+      <li>Vision system that does not just detect a defect — it investigates it against the line's
+          recent history and recommends a supervisor-readable action.</li>
+      <li>Runs real-time detection on CPU (YOLOv10n via <code>cv2.dnn</code>) with a reasoning layer
+          that weighs an isolated blemish against a repeated fault trend.</li>
+    </ul>
+  </div>
+
+  <div class="proj">
+    <div class="proj-head">
+      <span class="proj-title">commit-condom — Push Gate for Coding Agents<span class="tag stars">★ 1</span></span>
+      <span class="proj-meta">Open source</span>
+    </div>
+    <div class="stack">JavaScript · git hooks · proxy architecture</div>
+    <ul>
+      <li>Policy gate that inspects every commit for size, file count and secret patterns
+          <em>before</em> it reaches a remote; the agent holds a placeholder credential and the proxy
+          holds the real one.</li>
+      <li>Found and fixed a silent failure where every default secret pattern was skipped — a gate
+          that inspected nothing and passed everything.</li>
+    </ul>
+  </div>
+
+  <div class="proj">
+    <div class="proj-head">
+      <span class="proj-title">DriftClean — LLM Session Sanitizer<span class="tag stars">★ 2</span></span>
+      <span class="proj-meta">Open source</span>
+    </div>
+    <div class="stack">Python · streaming interception · pluggable judge models</div>
+    <ul>
+      <li>Intercepts a model's reasoning stream, scores it for refusal / fake compliance / off-task
+          drift, and asks a second judge model for a verdict before emitting a drift event.</li>
+      <li>Works with any provider that streams thinking tokens; zero dependencies.</li>
+    </ul>
+  </div>
+
+  <div class="proj">
+    <div class="proj-head">
+      <span class="proj-title">LabLens — Bloodwork Interpreter</span>
+      <span class="proj-meta">UnivaBio · DSH Hacks</span>
+    </div>
+    <div class="stack">Python · OCR · reference-range grounding</div>
+    <ul>
+      <li>Photograph a lab report; it reads the values, flags out-of-range results, and explains each
+          in plain English — grounded strictly in reference ranges, never a diagnosis.</li>
+    </ul>
+  </div>
+
+  <div class="proj">
+    <div class="proj-head">
+      <span class="proj-title">CornShield AI — Crop Disease Triage</span>
+      <span class="proj-meta">4-H AI in Agriculture 2026</span>
+    </div>
+    <div class="stack">Python · Flask · image classification · 21 passing tests</div>
+    <ul>
+      <li>Foliar disease early-detection and severity triage for Midwestern corn growers, with
+          extension-sourced treatment guidance. 21/21 tests passing; zero secrets committed.</li>
+    </ul>
+  </div>
+
+  <div class="proj">
+    <div class="proj-head">
+      <span class="proj-title">Tool-Call Compactor — Context Compression</span>
+      <span class="proj-meta">Open source</span>
+    </div>
+    <div class="stack">JavaScript · MCP · token accounting</div>
+    <ul>
+      <li>Compacts tool-definition payloads in a system prompt to cut token cost, exposing 1,100+
+          tools through a searchable index without loading their schemas.</li>
+    </ul>
+  </div>
+
+</section>
+
+<section>
+  <h2>Technical Skills</h2>
+  <dl class="grid">
+    <dt>Languages</dt>        <dd>Python, JavaScript / Node.js, Bash, SQL, HTML/CSS</dd>
+    <dt>AI / ML</dt>          <dd>LLM routing &amp; fallback, agent memory systems, prompt/context compression, computer vision (OpenCV, YOLO ONNX), OCR pipelines, embeddings</dd>
+    <dt>Infrastructure</dt>   <dd>Linux, systemd, Docker, Cloudflare tunnels, SQLite (WAL), REST APIs, git</dd>
+    <dt>Integrations</dt>     <dd>OpenAI &amp; Anthropic API schemas, MCP servers, Puppeteer/CDP browser automation, FastAPI, Flask</dd>
+  </dl>
+</section>
+
+<section>
+  <h2>Competitions &amp; Recognition</h2>
+  <ul>
+    <li><strong>OpenCV AI Competition 2026</strong> — submitted entry (Agentic Visual Inspector).</li>
+    <li><strong>Agent Memory Challenge 2026</strong> — built and live-verified a competition-grade
+        memory engine (AxiomMem).</li>
+    <li><strong>4-H AI in Agriculture 2026</strong> — division entry, CornShield AI.</li>
+    <li><strong>ForgeHacks Online 2026</strong> — submitted entry (ClarityCheck).</li>
+  </ul>
+</section>
+
+<p class="footnote">
+  All projects above are public at <a href="https://github.com/ronisaguey-ux">github.com/ronisaguey-ux</a>.
+  Self-taught; everything listed was designed, implemented and tested by hand.
+</p>
+
+</body>
+</html>
