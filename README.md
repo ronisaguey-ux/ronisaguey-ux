@@ -42,6 +42,12 @@ cut at a few hundred characters instead of tens of thousands. One measured case 
 same two lines repeated 1,006 times. Ordinary prose, code, logs and tables are left alone.
 `JavaScript` `opencode plugin`
 
+**[Laya-jev-mcp](https://github.com/ronisaguey-ux/Laya-jev-mcp)**
+Calibrated probabilities for an agent's own decisions: give it a situation and candidate actions, it returns
+a probability for each plus an `act`/`escalate` gate, so a 51/49 guess is refused instead of acted on. Two
+engines behind one idiom, local Laya and remote Jev, where naming an unavailable engine is an error rather
+than a silent substitution. `Python` `MCP`
+
 **[crypto-experiment](https://github.com/ronisaguey-ux/crypto-experiment)**
 Testing whether aggregated copy-trading signals from a public ledger can produce persistent edge.
 Paper-first, with monitoring before any capital is at risk. `Python`
