@@ -16,7 +16,7 @@ run unattended.
 | [commit-condom](https://github.com/ronisaguey-ux/commit-condom) | Pre-push policy gate for coding agents: commit size, file count and secret patterns checked behind a credential-isolating proxy. Found and fixed a silent failure where every default secret pattern was skipped. | JavaScript, git hooks |
 | [tool-call-compactor](https://github.com/ronisaguey-ux/tool-call-compactor) | Cuts prompt cost for tool-heavy agents: 1,100+ tools exposed through a searchable index instead of every schema sitting in the context window. Zero runtime dependencies. | JavaScript, MCP |
 | [AI-coding-orchestrator](https://github.com/ronisaguey-ux/AI-coding-orchestrator) | Multi-lane autonomous fix-executor: parses audit plans into disjoint-file batches, drives parallel LLM lanes with failover, applies byte-exact edits, verifies in-process and escalates stalled steps. | Python |
-| [crypto-experiment](https://github.com/ronisaguey-ux/crypto-experiment) | Testing whether aggregated copy-trading signals from a public ledger can produce persistent edge, paper-first, with monitoring before any capital is at risk. Private - access on request. | Python |
+| [crypto-experiment](https://github.com/ronisaguey-ux/crypto-experiment) | Testing whether aggregated copy-trading signals from a public ledger can produce persistent edge, paper-first, with monitoring before any capital is at risk. | Python |
 
 ## What I run daily
 
