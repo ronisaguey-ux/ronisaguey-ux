@@ -49,7 +49,7 @@ Docker, Linux, systemd, Cloudflare tunnels, git. LLM infrastructure: multi-provi
 MCP servers, RAG and agent memory, prompt and context compression, evaluation harnesses. Computer vision:
 OpenCV, YOLO ONNX, OCR. Browser automation: Puppeteer, CDP.
 
-40 repositories, 26 public. Everything here was designed, implemented, tested and deployed by hand.
+40 repositories, 28 public. Everything here was designed, implemented, tested and deployed by hand.
 
 ## Contact
 
