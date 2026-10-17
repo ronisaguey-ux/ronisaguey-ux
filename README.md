@@ -36,6 +36,12 @@ Multi-lane autonomous fix-executor: parses audit plans into disjoint-file batche
 with failover, applies byte-exact edits, verifies in-process, and escalates stalled steps through a three-tier
 solver. `Python`
 
+**[anti-spiral.js](https://github.com/ronisaguey-ux/anti-spiral.js)**
+Catches genuine reasoning loops mid-stream and aborts the turn: the same line restated instead of progress,
+cut at a few hundred characters instead of tens of thousands. One measured case ran 26,669 characters of the
+same two lines repeated 1,006 times. Ordinary prose, code, logs and tables are left alone.
+`JavaScript` `opencode plugin`
+
 **[crypto-experiment](https://github.com/ronisaguey-ux/crypto-experiment)**
 Testing whether aggregated copy-trading signals from a public ledger can produce persistent edge.
 Paper-first, with monitoring before any capital is at risk. `Python`
