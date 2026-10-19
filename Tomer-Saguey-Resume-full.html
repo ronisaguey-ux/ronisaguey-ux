@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Tomer Saguey — Résumé</title>
+<style>
+  @page { size: A4; margin: 14mm 14mm 12mm; }
+  * { box-sizing: border-box; }
+  body { font-family: "DejaVu Sans", Helvetica, Arial, sans-serif; font-size: 9.6pt; line-height: 1.42;
+         color: #16181d; margin: 0; }
+  h1 { font-size: 21pt; margin: 0 0 2pt; letter-spacing: -0.2pt; }
+  .sub { font-size: 10.2pt; color: #1a56db; font-weight: 600; margin: 0 0 4pt; }
+  .contact { font-size: 8.8pt; color: #444; margin: 0 0 10pt; }
+  .contact a { color: #1a56db; text-decoration: none; }
+  h2 { font-size: 10.4pt; text-transform: uppercase; letter-spacing: 0.6pt; margin: 13pt 0 5pt;
+       padding-bottom: 2pt; border-bottom: 1px solid #d7dbe0; }
+  p { margin: 0 0 5pt; }
+  ul { margin: 0 0 5pt; padding-left: 14pt; }
+  li { margin: 0 0 2.4pt; }
+  .job { margin: 0 0 6.5pt; }
+  .job .top { display: flex; justify-content: space-between; }
+  .job .name { font-weight: 700; }
+  .job .meta { color: #666; font-size: 8.6pt; }
+  .job .desc { margin-top: 1pt; }
+  .job a { color: #1a56db; text-decoration: none; font-size: 8.6pt; }
+  .two { display: flex; gap: 14pt; }
+  .two > div { flex: 1; }
+  .skill b { display: inline-block; min-width: 96pt; }
+  .cert { margin: 0 0 4pt; }
+  .cert .t { font-weight: 700; }
+  .cert .m { color: #666; font-size: 8.6pt; }
+  .muted { color: #666; font-size: 8.6pt; }
+  .rule { height: 2pt; background: #16181d; margin: 0 0 8pt; }
+  .imgs { display: flex; gap: 8pt; margin-top: 4pt; }
+  .imgs img { height: 58pt; border: 1px solid #d7dbe0; }
+</style>
+</head>
+<body>
+
+<h1>Tomer Saguey</h1>
+<div class="sub">Full-stack engineer — backends, APIs and the automation that connects them</div>
+<div class="contact">
+  RS Systems · Hollywood, Georgia, US (Eastern) ·
+  <a href="mailto:roni.saguey@gmail.com">roni.saguey@gmail.com</a> ·
+  <a href="https://github.com/ronisaguey-ux">github.com/ronisaguey-ux</a>
+</div>
+<div class="rule"></div>
+
+<h2>Summary</h2>
+<p>I take a half-built system, a broken integration or an idea that only exists in someone's head and hand back
+something running, documented and theirs to operate. Self-taught engineering across Python and
+Node/TypeScript backends, browser automation for hostile sites, production Linux, macOS and Windows deployments,
+and LLM infrastructure where it earns its place. I work end to end — architecture, implementation, tests,
+deployment, handover — and I ship alone or as the technical lead.</p>
+
+<h2>Selected Engineering Work</h2>
+
+<div class="job">
+  <div class="top"><span class="name">Webchat-to-API Harness</span><span class="meta">★ 9 · Node.js, Puppeteer/CDP</span></div>
+  <div class="desc">OpenAI- and Anthropic-compatible HTTP APIs in front of a live webchat browser session, with real
+  streaming, provider fallback, and file read/write plus shell command execution routed through the session. Any
+  agentic client — Aider, LiteLLM, Claude Code — drives it unchanged.</div>
+  <a href="https://github.com/ronisaguey-ux/webchat-to-api-harness">github.com/ronisaguey-ux/webchat-to-api-harness</a>
+</div>
+
+<div class="job">
+  <div class="top"><span class="name">AxiomMem — multi-tenant agent memory</span><span class="meta">Python, FastAPI, SQLite WAL</span></div>
+  <div class="desc">Stateful memory service with embeddings for semantic retrieval and temporal resolution, so a fact
+  keeps the window where it was true instead of being overwritten. Zero-loss retrieval under concurrent writers,
+  verified end to end against a live deployment, public Add/Search API.</div>
+  <a href="https://github.com/ronisaguey-ux/aml-hackathon">github.com/ronisaguey-ux/aml-hackathon</a>
+</div>
+
+<div class="job">
+  <div class="top"><span class="name">Tool-Call Compactor</span><span class="meta">★ 1 · Python, JavaScript, MCP</span></div>
+  <div class="desc">Exposes 1,100+ tool definitions through a searchable index and loads a full schema only when the
+  agent calls that tool — cutting system-prompt input tokens by over 80% depending on how many MCPs are configured.
+  Zero runtime dependencies.</div>
+  <a href="https://github.com/ronisaguey-ux/tool-call-compactor">github.com/ronisaguey-ux/tool-call-compactor</a>
+</div>
+
+<div class="job">
+  <div class="top"><span class="name">free-ai — free model access as one local API</span><span class="meta">★ 2 · Node.js, zero deps</span></div>
+  <div class="desc">Aggregates keyless free AI providers behind a single OpenAI-compatible endpoint: ranks providers,
+  rotates keys, applies per-model linear cooldowns on 429/5xx and fails over on its own. Ships MCP tooling over HTTP
+  and stdio.</div>
+  <a href="https://github.com/ronisaguey-ux/free-ai">github.com/ronisaguey-ux/free-ai</a>
+</div>
+
+<div class="job">
+  <div class="top"><span class="name">anti-spiral.js &amp; DriftClean</span><span class="meta">★ 1 / ★ 2 · JavaScript, Python</span></div>
+  <div class="desc">Streaming interceptors for LLM output: anti-spiral detects a repeated sentence mid-stream and
+  aborts the loop (a 26,669-character runaway cut to a few hundred); DriftClean scores a stream for off-task drift
+  and stops it before the tokens are spent.</div>
+  <a href="https://github.com/ronisaguey-ux/anti-spiral.js">github.com/ronisaguey-ux/anti-spiral.js</a> ·
+  <a href="https://github.com/ronisaguey-ux/DriftClean">github.com/ronisaguey-ux/DriftClean</a>
+</div>
+
+<div class="job">
+  <div class="top"><span class="name">commit-condom — credential-isolating push gate</span><span class="meta">★ 1 · JavaScript, git hooks</span></div>
+  <div class="desc">Pre-push policy gate behind a proxy that checks commit size, file count and secret patterns before
+  code leaves the machine, so an agent cannot publish a credential by accident.</div>
+  <a href="https://github.com/ronisaguey-ux/commit-condom">github.com/ronisaguey-ux/commit-condom</a>
+</div>
+
+<div class="job">
+  <div class="top"><span class="name">AI-Coding-Orchestrator</span><span class="meta">Python, MCP, Linux process control</span></div>
+  <div class="desc">Multi-lane autonomous fix executor: parses audit plans into disjoint file groups, runs parallel
+  agents, applies byte-exact edits and verifies in-process before reporting. Built on the same supervision model used
+  for production services.</div>
+  <a href="https://github.com/ronisaguey-ux/AI-coding-orchestrator">github.com/ronisaguey-ux/AI-coding-orchestrator</a>
+</div>
+
+<div class="job">
+  <div class="top"><span class="name">Agent infrastructure and ops tooling</span><span class="meta">Python, Shell, systemd</span></div>
+  <div class="desc">A family of always-on services: MCP bridges between agents and IDEs, background-agent tooling,
+  box-level ops utilities, a Telegram messaging layer, and a supervised multi-agent platform on systemd with
+  structured logs, session snapshots and a one-key kill switch.</div>
+  <a href="https://github.com/ronisaguey-ux?tab=repositories">github.com/ronisaguey-ux?tab=repositories</a>
+</div>
+
+<h2>Technical Skills</h2>
+<div class="two">
+  <div>
+    <p class="skill"><b>Languages</b> Python (FastAPI, Flask, pandas), JavaScript/TypeScript (Node, React), Bash, SQL, HTML/CSS</p>
+    <p class="skill"><b>Data</b> PostgreSQL, SQLite (WAL), Redis, schema migrations, query tuning, idempotent pipelines</p>
+    <p class="skill"><b>Automation</b> Playwright, Puppeteer, raw Chrome DevTools Protocol, OCR, OpenCV, YOLO ONNX</p>
+  </div>
+  <div>
+    <p class="skill"><b>Systems</b> Linux, macOS and Windows; systemd units and timers, launchd, Task Scheduler, Docker, reverse proxies, TLS</p>
+    <p class="skill"><b>APIs</b> REST, webhooks, OAuth2, signed requests, rate limiting, retries with backoff, Stripe and PayPal</p>
+    <p class="skill"><b>AI</b> LLM routing and failover, retrieval and embeddings, tool-calling agents, MCP servers, evaluation harnesses</p>
+  </div>
+</div>
+
+<h2>Certifications</h2>
+<div class="cert">
+  <div class="t">Kaggle Learn — Python</div>
+  <div class="m">Course completed 100%, certificate issued ·
+    <a href="https://www.kaggle.com/learn/certification/roni9999/python">kaggle.com/learn/certification/roni9999/python</a></div>
+</div>
+<div class="cert">
+  <div class="t">ForgeHacks Online 2026 — Certificate of Participation</div>
+  <div class="m">Issued October 2026 · project: ClarityCheck</div>
+</div>
+<div class="cert">
+  <div class="t">Freelancer.com — US English Level 1</div>
+  <div class="m">Platform English proficiency test, passed October 2026</div>
+</div>
+<div class="imgs">
+  <img src="/home/roni/Roni_workspace/resume/cert-kaggle-python.png" alt="Kaggle Python certificate">
+</div>
+
+<h2>Working Notes</h2>
+<p>Fixed scope and a written plan before code, milestones that can be tested, tests where they pay for themselves,
+documentation and a handover walkthrough. Typical delivery 3–14 days. Available for small fixes as well as full
+builds; US Eastern with overlap into EU hours.</p>
+
+</body>
+</html>

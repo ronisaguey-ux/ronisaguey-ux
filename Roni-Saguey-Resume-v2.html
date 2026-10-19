@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Roni Saguey — Software Engineer</title>
+<style>
+  @page { size: Letter; margin: 0.42in 0.52in; }
+  * { box-sizing: border-box; }
+  body {
+    font-family: "Inter", "Helvetica Neue", Arial, sans-serif;
+    color: #16181d; margin: 0; font-size: 9.8pt; line-height: 1.36;
+    -webkit-font-smoothing: antialiased;
+  }
+  a { color: #1a56db; text-decoration: none; }
+  header { border-bottom: 2px solid #16181d; padding-bottom: 8px; margin-bottom: 10px; }
+  h1 { font-size: 20pt; margin: 0 0 2px; letter-spacing: -0.5px; font-weight: 700; }
+  .role { font-size: 10.2pt; color: #4a4f5a; font-weight: 500; margin-bottom: 4px; }
+  .contact { font-size: 9pt; color: #4a4f5a; }
+  h2 {
+    font-size: 9.2pt; text-transform: uppercase; letter-spacing: 0.55px;
+    margin: 10px 0 5px; padding-bottom: 2px; border-bottom: 1px solid #d8dbe1;
+    color: #16181d; font-weight: 700;
+    break-after: avoid-page; page-break-after: avoid;
+  }
+  .summary { font-size: 9.7pt; color: #2b2f38; margin: 0 0 6px; }
+  .proj { margin-bottom: 7px; page-break-inside: avoid; }
+  .proj-head { margin-bottom: 1px; }
+  .proj-title { font-weight: 700; font-size: 10.2pt; }
+  .proj-meta { font-size: 8.5pt; color: #6b7280; margin-left: 8px; }
+  .stack {
+    font-size: 8.5pt; color: #4a4f5a; margin: 1px 0 2px;
+    font-family: "SF Mono", ui-monospace, Menlo, monospace;
+  }
+  ul { margin: 2px 0 0; padding-left: 15px; }
+  li { margin-bottom: 2px; }
+  .tag {
+    display: inline-block; font-size: 7.4pt; font-weight: 600; letter-spacing: .3px;
+    padding: 1px 5px; border-radius: 3px; margin-left: 5px;
+    background: #e8f0fe; color: #1a56db; text-transform: uppercase;
+  }
+  .tag.award { background: #fef3c7; color: #92400e; }
+  .tag.stars { background: #f3f4f6; color: #374151; }
+  .skill-line { margin: 0 0 3px; font-size: 9.5pt; color: #2b2f38; }
+  .skill-line strong { color: #16181d; }
+  .footnote { font-size: 8.3pt; color: #6b7280; margin-top: 5px; }
+  @media print { body { font-size: 9.8pt; } a { color: #16181d; } }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Roni Saguey</h1>
+  <div class="role">Software Engineer — backend services, APIs, automation, scrapers, agent infrastructure</div>
+  <div class="contact">github.com/ronisaguey-ux  ·  roni.saguey@gmail.com  ·  South Florida, US (GMT-4)</div>
+</header>
+
+<section>
+  <h2>Summary</h2>
+  <p class="summary">
+    Self-taught software engineer building backend services, REST APIs, browser and data-pipeline automation,
+    and agent infrastructure across Python, JavaScript/Node.js, and Linux/systemd. Ship end-to-end —
+    architecture, implementation, tests, documentation, and deployment. 40 repositories total (28 public)
+    at github.com/ronisaguey-ux, plus multiple applied engineering competition entries.
+  </p>
+</section>
+
+<section>
+  <h2>Selected Projects</h2>
+
+  <div class="proj">
+    <div class="proj-head">
+      <span class="proj-title">Webchat-to-API Harness</span>
+      <span class="tag stars">★ 9</span>
+      <span class="proj-meta">Open source · github.com/ronisaguey-ux/webchat-to-api-harness</span>
+    </div>
+    <div class="stack">JavaScript · Node.js · Puppeteer/CDP · OpenAI + Anthropic HTTP API schemas</div>
+    <ul>
+      <li>OpenAI- and Anthropic-compatible HTTP API backed by a live webchat browser session, enabling Aider,
+          LiteLLM, and Claude Code (via <code>ANTHROPIC_BASE_URL</code>) to drive an authenticated session programmatically.</li>
+      <li>Full streaming and tool-call execution — file read/write and bash commands bridged end-to-end through the HTTP layer.</li>
+    </ul>
+  </div>
+
+  <div class="proj">
+    <div class="proj-head">
+      <span class="proj-title">free-ai — Local Fallback Endpoint for Free LLM Tiers</span>
+      <span class="tag stars">★ 2</span>
+      <span class="proj-meta">Open source · github.com/ronisaguey-ux/free-ai</span>
+    </div>
+    <div class="stack">JavaScript · Node.js · HTTP server · MCP server · zero runtime dependencies</div>
+    <ul>
+      <li>Single local OpenAI-compatible endpoint fronting free LLM tiers with strict rank-order routing,
+          automatic failover on 429/5xx, per-model linear cooldowns, and multi-key rotation across an 89-provider catalogue.</li>
+      <li>Includes optional safe/balanced prompt compression and a zero-dependency stdio MCP server; verified by a 17-check HTTP test suite.</li>
+    </ul>
+  </div>
+
+  <div class="proj">
+    <div class="proj-head">
+      <span class="proj-title">AxiomMem — Agent Memory &amp; Retrieval Service</span>
+      <span class="tag award">Competition entry</span>
+      <span class="proj-meta">Agent Memory Challenge 2026 · github.com/ronisaguey-ux/aml-hackathon</span>
+    </div>
+    <div class="stack">Python · FastAPI · SQLite (WAL) · embeddings</div>
+    <ul>
+      <li>Backend memory service engineered for execution continuity, temporal resolution, and zero-loss retrieval
+          across coding and textual-memory tracks.</li>
+      <li>Built and verified end-to-end against the live competition API for contract compliance, tenant isolation,
+          idempotency, and high-volume ingestion.</li>
+    </ul>
+  </div>
+
+  <div class="proj">
+    <div class="proj-head">
+      <span class="proj-title">commit-condom — Pre-Push Policy Gate</span>
+      <span class="tag stars">★ 1</span>
+      <span class="proj-meta">Open source · github.com/ronisaguey-ux/commit-condom</span>
+    </div>
+    <div class="stack">JavaScript · git hooks · credential-isolating proxy</div>
+    <ul>
+      <li>Pre-push gate that inspects every commit for size, file count, and secret patterns before code reaches a remote;
+          the caller holds a placeholder credential while the proxy holds the real token.</li>
+      <li>Found and fixed a silent failure where default secret patterns were skipped, ensuring every pattern is enforced before push.</li>
+    </ul>
+  </div>
+
+  <div class="proj">
+    <div class="proj-head">
+      <span class="proj-title">DriftClean — Streaming Session Sanitizer</span>
+      <span class="tag stars">★ 2</span>
+      <span class="proj-meta">Open source · github.com/ronisaguey-ux/DriftClean</span>
+    </div>
+    <div class="stack">Python · streaming interception · pluggable verification</div>
+    <ul>
+      <li>Intercepts a model stream, scores it for refusal, fake compliance, or off-task drift, and verifies
+          with a secondary check before emitting a drift event. Zero runtime dependencies.</li>
+    </ul>
+  </div>
+
+  <div class="proj">
+    <div class="proj-head">
+      <span class="proj-title">anti-spiral.js — Stream Loop Detector</span>
+      <span class="tag stars">★ 1</span>
+      <span class="proj-meta">Open source · github.com/ronisaguey-ux/anti-spiral.js</span>
+    </div>
+    <div class="stack">JavaScript · streaming text analysis</div>
+    <ul>
+      <li>Catches repeated sentence loops mid-stream and aborts the turn — one measured case cut 26,669 characters
+          of two-line repetition (1,006 repeats) down to a few hundred characters while leaving ordinary prose, code, and logs untouched.</li>
+    </ul>
+  </div>
+
+  <div class="proj">
+    <div class="proj-head">
+      <span class="proj-title">Tool-Call Compactor · AI-Coding-Orchestrator · Laya-jev-mcp · crypto-experiment</span>
+      <span class="proj-meta">Open source · github.com/ronisaguey-ux</span>
+    </div>
+    <div class="stack">Python · JavaScript · MCP · SQLite · zero dependencies</div>
+    <ul>
+      <li><strong>tool-call-compactor</strong> — Exposes 1,100+ tool definitions through a compact searchable index, loading full JSON schemas only on selection; zero runtime dependencies.</li>
+      <li><strong>AI-coding-orchestrator</strong> — Parses audit plans into disjoint-file batches, runs parallel execution lanes with failover, applies byte-exact edits, and verifies in-process.</li>
+      <li><strong>Laya-jev-mcp</strong> — MCP server returning calibrated probabilities and an <code>act</code>/<code>escalate</code> gate for candidate actions so 51/49 guesses are escalated instead of executed.</li>
+      <li><strong>crypto-experiment</strong> — Public-ledger signal harvester and paper-trading evaluation pipeline with monitoring before capital is risked.</li>
+    </ul>
+  </div>
+
+  <div class="proj">
+    <div class="proj-head">
+      <span class="proj-title">Agentic Visual Inspector · LabLens · CornShield AI · Devpost-Radar</span>
+      <span class="proj-meta">Applied Python, Vision, OCR &amp; Scraping · github.com/ronisaguey-ux</span>
+    </div>
+    <div class="stack">Python · Flask · OpenCV · YOLOv10 ONNX · OCR · HTML/JSON scraping</div>
+    <ul>
+      <li><strong>Agentic Visual Inspector</strong> (OpenCV AI Competition 2026) — CPU real-time defect detection (YOLOv10n via <code>cv2.dnn</code>) paired with historical fault-trend analysis.</li>
+      <li><strong>LabLens</strong> (UnivaBio / DSH Hacks) — OCR pipeline that extracts values from photographed lab reports, flags out-of-range markers, and grounds explanations strictly in reference ranges.</li>
+      <li><strong>CornShield AI</strong> (4-H AI in Agriculture 2026) — Flask web service and image triage pipeline for foliar corn disease with extension-sourced guidance; 21/21 automated tests passing.</li>
+      <li><strong>devpost-radar</strong> — Public-web scraper and eligibility parser that filters open hackathons by participant criteria and prize rules.</li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <h2>Technical Skills</h2>
+  <p class="skill-line"><strong>Languages:</strong> Python, JavaScript / Node.js, TypeScript, Bash, SQL, HTML/CSS</p>
+  <p class="skill-line"><strong>Backends &amp; APIs:</strong> FastAPI, Flask, Express, REST APIs, webhooks, authentication, rate limiting, SQLite (WAL), PostgreSQL</p>
+  <p class="skill-line"><strong>Scraping &amp; Data Pipelines:</strong> Playwright, Puppeteer, Chrome DevTools Protocol (CDP), HTML/JSON parsing, deduplication, schema validation, CSV/JSONL/Parquet packaging, provenance tracking</p>
+  <p class="skill-line"><strong>Infrastructure &amp; Ops:</strong> Linux, systemd units and timers, process supervision, Docker, Cloudflare tunnels, git</p>
+  <p class="skill-line"><strong>Vision &amp; LLM Tooling:</strong> OpenCV, YOLOv10 ONNX, OCR, OpenAI &amp; Anthropic API schemas, MCP servers, context compression, multi-provider failover</p>
+</section>
+
+<section>
+  <h2>Certifications</h2>
+  <ul>
+    <li><strong>ForgeHacks Online 2026 — Certificate of Participation</strong> — issued October 2026 by the ForgeHacks organising team (project: ClarityCheck).</li>
+    <li><strong>Kaggle Learn — Python</strong> — course completed 100%, certificate issued (kaggle.com/learn/certification/roni9999/python).</li>
+    <li><strong>Freelancer.com — US English Level 1</strong> — platform English proficiency test, passed October 2026.</li>
+  </ul>
+</section>
+
+<section>
+  <h2>Competitions &amp; Entries</h2>
+  <ul>
+    <li><strong>OpenCV AI Competition 2026</strong> — submitted entry (Agentic Visual Inspector).</li>
+    <li><strong>Agent Memory Challenge 2026</strong> — built and live-verified a competition-grade memory engine (AxiomMem).</li>
+    <li><strong>4-H AI in Agriculture 2026</strong> — division entry (CornShield AI, 21/21 passing tests).</li>
+    <li><strong>ForgeHacks Online 2026</strong> — submitted entry (ClarityCheck, Certificate of Participation issued).</li>
+  </ul>
+</section>
+
+<p class="footnote">
+  40 repositories total (28 public) at github.com/ronisaguey-ux. Self-taught; every project listed was designed, implemented, and tested by hand.
+</p>
+
+</body>
+</html>
