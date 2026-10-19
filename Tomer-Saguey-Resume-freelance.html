@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Tomer Saguey — Backend &amp; Automation Engineer</title>
+<style>
+  @page { size: Letter; margin: 0.36in 0.48in; }
+  * { box-sizing: border-box; }
+  body {
+    font-family: "Inter", "Helvetica Neue", Arial, sans-serif;
+    color: #16181d; margin: 0; font-size: 9.2pt; line-height: 1.31;
+    -webkit-font-smoothing: antialiased;
+  }
+  a { color: #1a56db; text-decoration: none; }
+  header { border-bottom: 2px solid #16181d; padding-bottom: 6px; margin-bottom: 7px; }
+  h1 { font-size: 18pt; margin: 0 0 1px; letter-spacing: -0.4px; font-weight: 700; }
+  .role { font-size: 9.6pt; color: #4a4f5a; font-weight: 600; margin-bottom: 3px; }
+  .contact { font-size: 8.6pt; color: #4a4f5a; }
+  h2 {
+    font-size: 8.8pt; text-transform: uppercase; letter-spacing: 0.5px;
+    margin: 7px 0 4px; padding-bottom: 2px; border-bottom: 1px solid #d8dbe1;
+    color: #16181d; font-weight: 700;
+  }
+  .summary { font-size: 9.1pt; color: #2b2f38; margin: 0 0 4px; }
+  .proj { margin-bottom: 5px; page-break-inside: avoid; }
+  .proj-head { margin-bottom: 1px; }
+  .proj-title { font-weight: 700; font-size: 9.5pt; }
+  .proj-meta { font-size: 8.2pt; color: #6b7280; margin-left: 6px; }
+  .stack {
+    font-size: 8.1pt; color: #4a4f5a; margin: 0 0 2px;
+    font-family: "SF Mono", ui-monospace, Menlo, monospace;
+  }
+  ul { margin: 1px 0 0; padding-left: 14px; }
+  li { margin-bottom: 1.5px; }
+  .skill-line { margin: 0 0 2px; font-size: 9pt; color: #2b2f38; }
+  .skill-line strong { color: #16181d; }
+  .footnote { font-size: 8pt; color: #6b7280; margin-top: 4px; }
+  @media print { body { font-size: 9.2pt; } a { color: #16181d; } }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Tomer Saguey</h1>
+  <div class="role">Software Engineer — Python/Node Backends, REST APIs, Integrations, Scrapers &amp; Linux Automation</div>
+  <div class="contact">github.com/ronisaguey-ux  ·  roni.saguey@gmail.com  ·  South Florida, US (GMT-4)</div>
+</header>
+
+<section>
+  <h2>Summary &amp; Services Delivered</h2>
+  <p class="summary">
+    Software engineer building and repairing production backend services, third-party API integrations, browser/HTTP
+    scrapers, and unattended Linux automation. Fixed scope and written technical plan before code, testable milestones,
+    automated tests, and documented handover. 40 repositories total (28 public) at github.com/ronisaguey-ux.
+  </p>
+  <ul>
+    <li><strong>Backend Services &amp; REST APIs:</strong> Python (FastAPI, Flask) and Node.js/TypeScript services, authentication, webhooks, rate limiting, background workers, SQLite (WAL) and PostgreSQL.</li>
+    <li><strong>Third-Party Integrations:</strong> Stripe payment links/webhooks, CRM, email, Google Sheets, Telegram bots, and undocumented browser/HTTP endpoints bridged into clean internal APIs.</li>
+    <li><strong>Web Scraping &amp; Data Pipelines:</strong> Playwright/CDP and Puppeteer automation, HTML/JSON parsing, deduplication, retry/backoff logic, and scheduled delivery on Linux timers.</li>
+    <li><strong>Operations &amp; Supervision:</strong> Linux systemd services and timers, process-tree termination, log supervision, Docker packaging, and LLM API failover/cost control.</li>
+  </ul>
+</section>
+
+<section>
+  <h2>Selected Engineering Work</h2>
+
+  <div class="proj">
+    <div class="proj-head">
+      <span class="proj-title">Webchat-to-API Harness (★ 9)</span>
+      <span class="proj-meta">Node.js · Puppeteer/CDP · OpenAI &amp; Anthropic HTTP APIs · github.com/ronisaguey-ux/webchat-to-api-harness</span>
+    </div>
+    <ul>
+      <li>Built an OpenAI- and Anthropic-compatible HTTP server in front of a live webchat browser session with streaming responses and full file read/write and bash tool calling, allowing Aider, LiteLLM, and Claude Code to drive the session without client changes.</li>
+    </ul>
+  </div>
+
+  <div class="proj">
+    <div class="proj-head">
+      <span class="proj-title">AxiomMem — High-Throughput FastAPI + SQLite (WAL) Service</span>
+      <span class="proj-meta">Python · FastAPI · SQLite WAL · Embeddings · github.com/ronisaguey-ux/aml-hackathon</span>
+    </div>
+    <ul>
+      <li>Engineered a multi-tenant stateful API service with temporal resolution and zero-loss retrieval; live-verified end-to-end for contract compliance, tenant isolation, idempotency, and large-scale ingestion.</li>
+    </ul>
+  </div>
+
+  <div class="proj">
+    <div class="proj-head">
+      <span class="proj-title">free-ai — Local Fallback Server &amp; MCP Tooling (★ 2)</span>
+      <span class="proj-meta">JavaScript · Node.js · HTTP &amp; stdio MCP · Zero dependencies · github.com/ronisaguey-ux/free-ai</span>
+    </div>
+    <ul>
+      <li>Built a zero-dependency local OpenAI-compatible proxy with ranked model fallback, per-model linear cooldowns on 429/5xx, multi-key rotation across an 89-provider catalogue, prompt compression, and a 17-check integration test suite.</li>
+    </ul>
+  </div>
+
+  <div class="proj">
+    <div class="proj-head">
+      <span class="proj-title">commit-condom — Credential-Isolating Git Push Gate (★ 1)</span>
+      <span class="proj-meta">JavaScript · Git Hooks · Proxy Architecture · github.com/ronisaguey-ux/commit-condom</span>
+    </div>
+    <ul>
+      <li>Built a pre-push policy gate behind a credential-isolating proxy that checks commit size, file count, and secret patterns before code leaves the machine; diagnosed and fixed a silent failure where default secret patterns were skipped.</li>
+    </ul>
+  </div>
+
+  <div class="proj">
+    <div class="proj-head">
+      <span class="proj-title">Tool-Call Compactor · anti-spiral.js (★ 1) · DriftClean (★ 2) · AI-Coding-Orchestrator</span>
+      <span class="proj-meta">Python · JavaScript · MCP · Linux Process Control · github.com/ronisaguey-ux</span>
+    </div>
+    <ul>
+      <li><strong>tool-call-compactor:</strong> Exposes 1,100+ tool definitions behind a searchable index, loading full schemas only on demand with zero runtime dependencies.</li>
+      <li><strong>anti-spiral.js &amp; DriftClean:</strong> Streaming interceptors that abort runaway repetition loops (cutting a 26,669-char loop to a few hundred chars) and score streams for off-task drift.</li>
+      <li><strong>AI-coding-orchestrator &amp; CornShield AI:</strong> Parallel batch fix-executor with byte-exact edits and in-process verification; Flask + image-classification service with 21/21 passing automated tests.</li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <h2>Technical Skills</h2>
+  <p class="skill-line"><strong>Languages &amp; Frameworks:</strong> Python (FastAPI, Flask), JavaScript / Node.js, TypeScript, React, Bash, SQL, HTML/CSS</p>
+  <p class="skill-line"><strong>APIs, Data &amp; Scraping:</strong> REST APIs, webhooks, OAuth/Bearer auth, Playwright, Puppeteer, CDP, SQLite (WAL), PostgreSQL, OpenCV, YOLOv10 ONNX, OCR</p>
+  <p class="skill-line"><strong>Systems &amp; DevOps:</strong> Linux, systemd units/timers, process supervision, Docker, Cloudflare tunnels, git, MCP servers</p>
+</section>
+
+<section>
+  <h2>Certifications</h2>
+  <ul>
+    <li><strong>ForgeHacks Online 2026 — Certificate of Participation</strong> — issued October 2026 (project: ClarityCheck).</li>
+    <li><strong>Kaggle Learn — Python</strong> — course completed 100%, certificate issued (kaggle.com/learn/certification/roni9999/python).</li>
+    <li><strong>Freelancer.com — US English Level 1</strong> — platform English proficiency test, passed October 2026.</li>
+  </ul>
+</section>
+
+</body>
+</html>
