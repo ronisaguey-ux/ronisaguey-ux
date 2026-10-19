@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Roni Saguey — Data Pipeline &amp; Web Scraping Engineer</title>
+<style>
+  @page { size: Letter; margin: 0.36in 0.48in; }
+  * { box-sizing: border-box; }
+  body {
+    font-family: "Inter", "Helvetica Neue", Arial, sans-serif;
+    color: #16181d; margin: 0; font-size: 9.2pt; line-height: 1.31;
+    -webkit-font-smoothing: antialiased;
+  }
+  a { color: #1a56db; text-decoration: none; }
+  header { border-bottom: 2px solid #16181d; padding-bottom: 6px; margin-bottom: 7px; }
+  h1 { font-size: 18pt; margin: 0 0 1px; letter-spacing: -0.4px; font-weight: 700; }
+  .role { font-size: 9.6pt; color: #4a4f5a; font-weight: 600; margin-bottom: 3px; }
+  .contact { font-size: 8.6pt; color: #4a4f5a; }
+  h2 {
+    font-size: 8.8pt; text-transform: uppercase; letter-spacing: 0.5px;
+    margin: 7px 0 4px; padding-bottom: 2px; border-bottom: 1px solid #d8dbe1;
+    color: #16181d; font-weight: 700;
+  }
+  .summary { font-size: 9.1pt; color: #2b2f38; margin: 0 0 4px; }
+  .proj { margin-bottom: 5px; page-break-inside: avoid; }
+  .proj-head { margin-bottom: 1px; }
+  .proj-title { font-weight: 700; font-size: 9.5pt; }
+  .proj-meta { font-size: 8.2pt; color: #6b7280; margin-left: 6px; }
+  ul { margin: 1px 0 0; padding-left: 14px; }
+  li { margin-bottom: 1.5px; }
+  .skill-line { margin: 0 0 2px; font-size: 9pt; color: #2b2f38; }
+  .skill-line strong { color: #16181d; }
+  @media print { body { font-size: 9.2pt; } a { color: #16181d; } }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Roni Saguey</h1>
+  <div class="role">Data Pipeline &amp; Web Scraping Engineer — Public-Web Extraction, Schema Validation &amp; Provenance Packaging</div>
+  <div class="contact">github.com/ronisaguey-ux  ·  roni.saguey@gmail.com  ·  South Florida, US (GMT-4)</div>
+</header>
+
+<section>
+  <h2>Summary &amp; Dataset Packaging Discipline</h2>
+  <p class="summary">
+    Software engineer specialising in public-web data extraction, browser automation (Playwright, Puppeteer, CDP),
+    OCR/vision data pipelines, and reproducible dataset packaging in Python and SQL. Every dataset is collected strictly
+    from publicly reachable sources with zero PII and ships with machine-computed schema and provenance documentation.
+  </p>
+  <ul>
+    <li><strong>Polite, Compliant Collection:</strong> Publicly reachable HTTP/S and headless browser targets only; <code>robots.txt</code> checked before fetch, polite request delays, exponential backoff on 429/403, and differential probing (<code>diffprobe.py</code>) so silent empty/unfiltered responses fail fast instead of writing bad rows.</li>
+    <li><strong>Computed Schema &amp; Provenance Packaging:</strong> Every delivery includes the clean dataset (CSV, JSONL, or Parquet) plus an auto-generated <code>DATA_DICTIONARY.md</code> (column types, non-null/null counts, distinct counts, ranges, and examples computed directly from the shipped file) and <code>PROVENANCE.md</code> (exact source URLs, timestamps, collection method, and PII-free attestation).</li>
+  </ul>
+</section>
+
+<section>
+  <h2>Data Pipeline, Scraping &amp; Extraction Projects</h2>
+
+  <div class="proj">
+    <div class="proj-head">
+      <span class="proj-title">Reproducible Scraping &amp; Dataset Packaging Pipeline</span>
+      <span class="proj-meta">Python · Playwright/CDP · Custom CSS/HTML Selector Engine · CSV/JSONL/Parquet</span>
+    </div>
+    <ul>
+      <li>Built a zero-external-dependency Python scraping and packaging toolchain (<code>scraper.py</code>, <code>htmlsel.py</code>, <code>package.py</code>, <code>diffprobe.py</code>) that enforces <code>robots.txt</code> compliance, raises hard errors on zero-row selector drift, and computes <code>DATA_DICTIONARY.md</code> and <code>PROVENANCE.md</code> directly from the output file.</li>
+    </ul>
+  </div>
+
+  <div class="proj">
+    <div class="proj-head">
+      <span class="proj-title">AxiomMem — High-Volume SQLite (WAL) &amp; Embedding Ingestion Engine</span>
+      <span class="proj-meta">Python · FastAPI · SQLite WAL · Embeddings · github.com/ronisaguey-ux/aml-hackathon</span>
+    </div>
+    <ul>
+      <li>Engineered a high-throughput storage and retrieval engine with temporal resolution, strict tenant isolation, idempotent writes, and zero-loss retrieval; verified against a live competition ingestion benchmark.</li>
+    </ul>
+  </div>
+
+  <div class="proj">
+    <div class="proj-head">
+      <span class="proj-title">Webchat-to-API Harness (★ 9) — Browser Session &amp; Stream Extraction</span>
+      <span class="proj-meta">Node.js · Puppeteer/CDP · Structured Stream Parsing · github.com/ronisaguey-ux/webchat-to-api-harness</span>
+    </div>
+    <ul>
+      <li>Built a browser-automation harness over Chrome DevTools Protocol that drives a live web UI and parses streamed responses and tool calls into normalized OpenAI/Anthropic JSON schemas.</li>
+    </ul>
+  </div>
+
+  <div class="proj">
+    <div class="proj-head">
+      <span class="proj-title">LabLens, Agentic Visual Inspector &amp; CornShield AI — OCR &amp; Vision Extraction</span>
+      <span class="proj-meta">Python · OpenCV · YOLOv10 ONNX · OCR · Flask · github.com/ronisaguey-ux</span>
+    </div>
+    <ul>
+      <li><strong>LabLens:</strong> OCR extraction pipeline that parses structured biomarker values and units from photographed lab reports and validates them against reference-range tables.</li>
+      <li><strong>Agentic Visual Inspector &amp; CornShield AI:</strong> CPU real-time YOLOv10 ONNX defect detection and historical fault-trend logging; Flask image triage pipeline with 21/21 passing automated tests.</li>
+    </ul>
+  </div>
+
+  <div class="proj">
+    <div class="proj-head">
+      <span class="proj-title">devpost-radar, crypto-experiment &amp; tool-call-compactor — Feed &amp; Schema Indexing</span>
+      <span class="proj-meta">Python · JavaScript · JSON Schema · Public APIs · github.com/ronisaguey-ux</span>
+    </div>
+    <ul>
+      <li><strong>devpost-radar &amp; crypto-experiment:</strong> Automated harvesters for public competition listings and public ledger copy-trading signals with deduplication and paper-first validation.</li>
+      <li><strong>tool-call-compactor &amp; free-ai (★ 2):</strong> Compacts 1,100+ JSON tool schemas into a searchable index; local fallback proxy with 17 automated HTTP checks.</li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <h2>Technical Skills</h2>
+  <p class="skill-line"><strong>Data &amp; Scraping:</strong> Python, SQL, Playwright, Puppeteer, Chrome DevTools Protocol (CDP), HTML/CSS/JSON parsing, deduplication, schema validation, CSV, JSONL, Parquet, SQLite (WAL), PostgreSQL</p>
+  <p class="skill-line"><strong>Vision, OCR &amp; Services:</strong> OpenCV, YOLOv10 ONNX, OCR, FastAPI, Flask, Node.js, Linux, systemd timers, Docker, git</p>
+</section>
+
+<section>
+  <h2>Certifications</h2>
+  <ul>
+    <li><strong>ForgeHacks Online 2026 — Certificate of Participation</strong> — issued October 2026 (project: ClarityCheck).</li>
+    <li><strong>Kaggle Learn — Python</strong> — course completed 100%, certificate issued (kaggle.com/learn/certification/roni9999/python).</li>
+    <li><strong>Freelancer.com — US English Level 1</strong> — platform English proficiency test, passed October 2026.</li>
+  </ul>
+</section>
+
+</body>
+</html>
