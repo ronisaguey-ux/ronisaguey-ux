@@ -5,7 +5,7 @@ control plane that keeps them observable and stoppable.**
 
 <div align="center">
 
-[![Projects](https://img.shields.io/badge/Projects-40-16181d?style=flat-square)](https://github.com/ronisaguey-ux?tab=repositories)
+[![Projects](https://img.shields.io/badge/Projects-42-16181d?style=flat-square)](https://github.com/ronisaguey-ux?tab=repositories)
 [![Focus](https://img.shields.io/badge/Focus-Agent%20infrastructure%20%C2%B7%20LLM%20tooling-1a56db?style=flat-square)](#flagship-repositories)
 [![Resume](https://img.shields.io/badge/R%C3%A9sum%C3%A9-PDF-92400e?style=flat-square)](./Roni-Saguey-Resume.pdf)
 
@@ -16,6 +16,18 @@ JavaScript/Node and shell. My work sits where model behaviour meets real systems
 keeping agent context small, remembering what matters, and making autonomous agents safe to leave running.
 
 ## Flagship repositories
+
+**[Helpotron](https://github.com/ronisaguey-ux/Helpotron)**
+AI-native academic study operating system for high-school students: Socratic agent tutoring, multi-modal
+assignment dump (audio, notes, photos), FSRS-based spaced repetition, double-entry token economy, and a
+Chrome MV3 extension for Canvas/Google Classroom scraping. Full-stack FastAPI + React 19, BSL 1.1 licensed.
+`Python` `JavaScript` `FastAPI` `React` `SQLite`
+
+**[T2B](https://github.com/ronisaguey-ux/T2B)**
+Autonomous multi-channel lead generation platform for trade contractors (roofing, solar, HVAC). Ingests
+raw property/permit leads, runs LLM-powered conversational qualification over SMS (Twilio) and Telegram,
+delivers paywall-protected leads into a contractor portal. SQLite WAL state, zero cloud DB fees, BSL 1.1.
+`Python` `Flask` `SQLite` `Twilio` `Telegram` `LLM`
 
 **[webchat-to-api-harness](https://github.com/ronisaguey-ux/webchat-to-api-harness)**
 OpenAI- and Anthropic-compatible HTTP API backed by a real webchat session. Any agentic client, Aider,
@@ -70,7 +82,7 @@ Docker, Linux, systemd, Cloudflare tunnels, git. LLM infrastructure: multi-provi
 servers, RAG and agent memory, prompt and context compression, evaluation harnesses. Computer vision: OpenCV,
 YOLO ONNX, OCR. Browser automation: Puppeteer, CDP.
 
-40 repositories, 28 public. Everything here was designed, implemented, tested and deployed by hand.
+42 repositories, 30 public. Everything here was designed, implemented, tested and deployed by hand.
 
 ## Contact
 
