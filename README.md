@@ -62,6 +62,8 @@ reliably, it is not ready to run unattended.
 
 ## Also public
 
+- [Helpotron](https://github.com/ronisaguey-ux/Helpotron): Autonomous academic study OS and workflow automation engine with unified MCP orchestration, SQLite WAL persistence, and real-time task triage.
+- [T2B](https://github.com/ronisaguey-ux/T2B): Autonomous qualification and sales engagement engine for trade contractors — property/permit ETL, Twilio SMS/Telegram multi-channel conversational loops, and paywalled contractor portal.
 - [free-ai](https://github.com/ronisaguey-ux/free-ai): one local endpoint in front of 50+ models across 10
   providers, ranked fallback, linear per-model cooldown, zero dependencies.
 - [DriftClean](https://github.com/ronisaguey-ux/DriftClean): intercepts a model's reasoning stream and scores
@@ -82,7 +84,7 @@ Docker, Linux, systemd, Cloudflare tunnels, git. LLM infrastructure: multi-provi
 servers, RAG and agent memory, prompt and context compression, evaluation harnesses. Computer vision: OpenCV,
 YOLO ONNX, OCR. Browser automation: Puppeteer, CDP.
 
-40 repositories, 28 public. Everything here was designed, implemented, tested and deployed by hand.
+42 repositories, 30 public. Everything here was designed, implemented, tested and deployed by hand.
 
 ## Contact
 
