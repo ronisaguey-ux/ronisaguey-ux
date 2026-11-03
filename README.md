@@ -31,6 +31,42 @@ loops with zero human intervention, and operates a paywalled contractor portal w
 and Stripe credit integration.
 `Python` `FastAPI` `Twilio` `PostgreSQL` `Tailwind` `ETL`
 
+**[felicity](https://github.com/ronisaguey-ux/felicity)**
+Consolidated defensive OpSec engine: static vulnerability auditing, AST lookahead analysis, high-entropy
+secret detection, AI agent/MCP sandbox validation, model weight deserialization scanner, and air-gapped pre-push
+git policy gate. Synthesizes detection primitives across 35+ security tools with zero external dependencies and
+native SARIF 2.1.0 output.
+`Python` `AST` `OpSec` `SARIF` `Git Hooks`
+
+**[commit-condom](https://github.com/ronisaguey-ux/commit-condom)**
+Pre-push policy gate for coding agents: commit size, file count and secret patterns checked behind a
+credential-isolating proxy. Found and fixed a silent failure where every default secret pattern was skipped,
+a gate that inspected nothing and passed everything. `JavaScript` `git hooks`
+
+**[token-condom](https://github.com/ronisaguey-ux/token-condom)**
+Deterministic write-time tool output compressor and deduplicator for agent context windows. Collapses repetitive
+terminal logs, test runs, JSON structures, and git diffs before prompt ingestion to guarantee byte-exact prefix
+caching and prevent cache-miss cost amplification across DeepSeek, Claude, and OpenAI.
+`Node.js` `Bash` `MCP` `Prompt Caching`
+
+**[tool-call-compactor](https://github.com/ronisaguey-ux/tool-call-compactor)**
+Dynamic MCP tool schema compressor and inverted search index. Compresses dense JSON schemas into 30-100 word
+functional definitions with titles so models comprehend tool capabilities without context bloat, retrieving full
+schemas only when explicitly called across 1,100+ tools.
+`JavaScript` `MCP`
+
+**[context-rot-detector](https://github.com/ronisaguey-ux/context-rot-detector)**
+Real-time context degradation telemetry engine for 900k-token agent windows. Attaches to active sessions to track
+15 behavioral signals (instruction amnesia, attention dilution, token bucket exhaustion, error loops) and calculates
+the mathematical compaction knee to execute compaction at the optimal coherence and cost window.
+`Python` `DuckDB` `Telemetry`
+
+**[memory-condom](https://github.com/ronisaguey-ux/memory-condom)**
+Persistent structured memory engine injected into every agent turn while safeguarding provider prefix caches.
+Enforces append-only memory mutations upwards, permitting in-place rewrites exclusively after compaction events,
+paired with strict word budgets and terse output constraints to stop agents from yapping away context.
+`Python` `JSONL` `Prompt Caching`
+
 **[webchat-to-api-harness](https://github.com/ronisaguey-ux/webchat-to-api-harness)**
 OpenAI- and Anthropic-compatible HTTP API backed by a real webchat session. Any agentic client, Aider,
 LiteLLM, or Claude Code via `ANTHROPIC_BASE_URL`, can drive a session you own, with full file and bash tool
