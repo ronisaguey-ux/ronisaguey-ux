@@ -5,7 +5,7 @@ control plane that keeps them observable and stoppable.**
 
 <div align="center">
 
-[![Projects](https://img.shields.io/badge/Projects-40-16181d?style=flat-square)](https://github.com/ronisaguey-ux?tab=repositories)
+[![Projects](https://img.shields.io/badge/Projects-42-16181d?style=flat-square)](https://github.com/ronisaguey-ux?tab=repositories)
 [![Focus](https://img.shields.io/badge/Focus-Agent%20infrastructure%20%C2%B7%20LLM%20tooling-1a56db?style=flat-square)](#flagship-repositories)
 [![Resume](https://img.shields.io/badge/R%C3%A9sum%C3%A9-PDF-92400e?style=flat-square)](./Roni-Saguey-Resume.pdf)
 
@@ -16,6 +16,20 @@ JavaScript/Node and shell. My work sits where model behaviour meets real systems
 keeping agent context small, remembering what matters, and making autonomous agents safe to leave running.
 
 ## Flagship repositories
+
+**[Helpotron](https://github.com/ronisaguey-ux/Helpotron)**
+Autonomous academic study operating system and multi-agent workflow platform for paying university students.
+Orchestrates 15-category autonomous audit and fix swarms across independent worktrees, multi-agent MCP tool
+triage, and SQLite WAL persistence. Features a real-time student command center, automated course-material
+ingestion, idempotent token billing ledgers, and zero-compromise production safety.
+`Python` `FastAPI` `React 19` `Tailwind v4` `SQLite WAL` `MCP`
+
+**[T2B](https://github.com/ronisaguey-ux/T2B)**
+Autonomous qualification and sales engagement engine for trade contractors. Ingests municipal permit ETL
+pipelines and property databases, drives multi-channel (Twilio SMS and Telegram) conversational qualification
+loops with zero human intervention, and operates a paywalled contractor portal with instant lead unlocking
+and Stripe credit integration.
+`Python` `FastAPI` `Twilio` `PostgreSQL` `Tailwind` `ETL`
 
 **[webchat-to-api-harness](https://github.com/ronisaguey-ux/webchat-to-api-harness)**
 OpenAI- and Anthropic-compatible HTTP API backed by a real webchat session. Any agentic client, Aider,
@@ -62,8 +76,6 @@ reliably, it is not ready to run unattended.
 
 ## Also public
 
-- [Helpotron](https://github.com/ronisaguey-ux/Helpotron): Autonomous academic study OS and workflow automation engine with unified MCP orchestration, SQLite WAL persistence, and real-time task triage.
-- [T2B](https://github.com/ronisaguey-ux/T2B): Autonomous qualification and sales engagement engine for trade contractors — property/permit ETL, Twilio SMS/Telegram multi-channel conversational loops, and paywalled contractor portal.
 - [free-ai](https://github.com/ronisaguey-ux/free-ai): one local endpoint in front of 50+ models across 10
   providers, ranked fallback, linear per-model cooldown, zero dependencies.
 - [DriftClean](https://github.com/ronisaguey-ux/DriftClean): intercepts a model's reasoning stream and scores

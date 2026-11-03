@@ -18,16 +18,18 @@ keeping agent context small, remembering what matters, and making autonomous age
 ## Flagship repositories
 
 **[Helpotron](https://github.com/ronisaguey-ux/Helpotron)**
-AI-native academic study operating system for high-school students: Socratic agent tutoring, multi-modal
-assignment dump (audio, notes, photos), FSRS-based spaced repetition, double-entry token economy, and a
-Chrome MV3 extension for Canvas/Google Classroom scraping. Full-stack FastAPI + React 19, BSL 1.1 licensed.
-`Python` `JavaScript` `FastAPI` `React` `SQLite`
+Autonomous academic study operating system and multi-agent workflow platform for paying university students.
+Orchestrates 15-category autonomous audit and fix swarms across independent worktrees, multi-agent MCP tool
+triage, and SQLite WAL persistence. Features a real-time student command center, automated course-material
+ingestion, idempotent token billing ledgers, and zero-compromise production safety.
+`Python` `FastAPI` `React 19` `Tailwind v4` `SQLite WAL` `MCP`
 
 **[T2B](https://github.com/ronisaguey-ux/T2B)**
-Autonomous multi-channel lead generation platform for trade contractors (roofing, solar, HVAC). Ingests
-raw property/permit leads, runs LLM-powered conversational qualification over SMS (Twilio) and Telegram,
-delivers paywall-protected leads into a contractor portal. SQLite WAL state, zero cloud DB fees, BSL 1.1.
-`Python` `Flask` `SQLite` `Twilio` `Telegram` `LLM`
+Autonomous qualification and sales engagement engine for trade contractors. Ingests municipal permit ETL
+pipelines and property databases, drives multi-channel (Twilio SMS and Telegram) conversational qualification
+loops with zero human intervention, and operates a paywalled contractor portal with instant lead unlocking
+and Stripe credit integration.
+`Python` `FastAPI` `Twilio` `PostgreSQL` `Tailwind` `ETL`
 
 **[webchat-to-api-harness](https://github.com/ronisaguey-ux/webchat-to-api-harness)**
 OpenAI- and Anthropic-compatible HTTP API backed by a real webchat session. Any agentic client, Aider,
@@ -47,6 +49,18 @@ schema sitting in the context window. Zero runtime dependencies. `JavaScript` `M
 Multi-lane autonomous fix-executor: parses audit plans into disjoint-file batches, drives parallel LLM lanes
 with failover, applies byte-exact edits, verifies in-process, and escalates stalled steps through a three-tier
 solver. `Python`
+
+**[anti-spiral.js](https://github.com/ronisaguey-ux/anti-spiral.js)**
+Catches genuine reasoning loops mid-stream and aborts the turn: the same line restated instead of progress,
+cut at a few hundred characters instead of tens of thousands. One measured case ran 26,669 characters of the
+same two lines repeated 1,006 times. Ordinary prose, code, logs and tables are left alone.
+`JavaScript` `opencode plugin`
+
+**[Laya-jev-mcp](https://github.com/ronisaguey-ux/Laya-jev-mcp)**
+Calibrated probabilities for an agent's own decisions: give it a situation and candidate actions, it returns
+a probability for each plus an `act`/`escalate` gate, so a 51/49 guess is refused instead of acted on. Two
+engines behind one idiom, local Laya and remote Jev, where naming an unavailable engine is an error rather
+than a silent substitution. `Python` `MCP`
 
 **[crypto-experiment](https://github.com/ronisaguey-ux/crypto-experiment)**
 Testing whether aggregated copy-trading signals from a public ledger can produce persistent edge.
