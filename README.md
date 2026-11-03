@@ -136,6 +136,6 @@ YOLO ONNX, OCR. Browser automation: Puppeteer, CDP.
 
 ## Contact
 
-- Email: roni.saguey@gmail.com
+- Email: buisness@rssystemsweb.com
 - Location: South Florida, United States (US Eastern)
 - All repositories: https://github.com/ronisaguey-ux?tab=repositories
