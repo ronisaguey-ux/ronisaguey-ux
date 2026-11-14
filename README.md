@@ -37,7 +37,9 @@ Consolidated defensive OpSec engine: static vulnerability auditing, AST lookahea
 secret detection, AI agent/MCP sandbox validation, model weight deserialization scanner, and air-gapped pre-push
 git policy gate. Synthesizes detection primitives across 35 scanner domains with zero external dependencies and
 native SARIF 2.1.0 plus CycloneDX output. Measured at 8.3 s over 100 Python files against Bandit's 4.1 s and
-Semgrep's 44.6 s on the same corpus, with a demo request form in the public showcase.
+Semgrep's 44.6 s on the same corpus.
+In development. The public showcase is [Shengcun-Scanner/shengcun-showcase](https://github.com/Shengcun-Scanner/shengcun-showcase):
+a lite edition is being cut for release under AGPL-3.0, and the full edition will launch as a proprietary SaaS.
 `Python` `AST` `OpSec` `SARIF` `Git Hooks`
 
 **[rust-graph](https://github.com/ronisaguey-ux/rust-graph)**
