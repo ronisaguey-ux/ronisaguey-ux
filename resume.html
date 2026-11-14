@@ -79,6 +79,25 @@
 
   <div class="proj">
     <div class="proj-head">
+      <span class="proj-title">rust-graph — Code Knowledge Graph</span>
+      <span class="proj-meta">Open source</span>
+    </div>
+    <div class="stack">Rust · standard library only · 42 languages</div>
+    <ul>
+      <li>Static binary that walks a source tree and writes one JSON graph of symbols, calls, imports and
+          per-function value flow for <strong>42 languages</strong> — with no parser library, no
+          <code>serde</code> and no <code>regex</code>; the lexer, the JSON writer and the SHA-256 are in
+          the repo.</li>
+      <li>Deterministic to the byte and memory-bounded (facts spool to disk, the graph streams out), so it
+          runs on a build box that must stay small and offline.</li>
+      <li>Every edge is labelled <code>EXTRACTED</code> or <code>INFERRED</code> with the strategy named,
+          and ambiguity is reported as <code>unresolved</code> rather than guessed. Coverage is measured per
+          file: 125 / 1,854 JavaScript, 80 / 2,000 TypeScript, 14 / 568 Python, 246 / 1,816 Rust.</li>
+    </ul>
+  </div>
+
+  <div class="proj">
+    <div class="proj-head">
       <span class="proj-title">Webchat-to-API Harness<span class="tag stars">★ 9</span></span>
       <span class="proj-meta">Open source</span>
     </div>
