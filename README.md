@@ -18,10 +18,11 @@ keeping agent context small, remembering what matters, and making autonomous age
 ## Flagship repositories
 
 **[Helpotron](https://github.com/ronisaguey-ux/Helpotron)**
-Autonomous academic study operating system and multi-agent workflow platform for paying university students.
-Orchestrates 15-category autonomous audit and fix swarms across independent worktrees, multi-agent MCP tool
-triage, and SQLite WAL persistence. Features a real-time student command center, automated course-material
-ingestion, idempotent token billing ledgers, and zero-compromise production safety.
+A SaaS I built for university students and then chose not to launch. It took a student's own course material,
+ingested it, and turned it into study material on demand: plans, questions, explanations and graded answers.
+It ran as a real product with real users — multi-tenant FastAPI backend, React front end, per-student data
+isolation, and metered usage — and it works. What it never had was a route to market I was willing to pay for,
+so it is a portfolio piece now rather than a business: the honest version is "shipped, used, parked".
 `Python` `FastAPI` `React 19` `Tailwind v4` `SQLite WAL` `MCP`
 
 **[T2B](https://github.com/ronisaguey-ux/T2B)**
