@@ -31,12 +31,22 @@ loops with zero human intervention, and operates a paywalled contractor portal w
 and Stripe credit integration.
 `Python` `FastAPI` `Twilio` `PostgreSQL` `Tailwind` `ETL`
 
-**[felicity](https://github.com/ronisaguey-ux/felicity)**
+**[Shengcun](https://github.com/Shengcun-Scanner/shengcun-showcase)**
 Consolidated defensive OpSec engine: static vulnerability auditing, AST lookahead analysis, high-entropy
 secret detection, AI agent/MCP sandbox validation, model weight deserialization scanner, and air-gapped pre-push
-git policy gate. Synthesizes detection primitives across 35+ security tools with zero external dependencies and
-native SARIF 2.1.0 output.
+git policy gate. Synthesizes detection primitives across 35 scanner domains with zero external dependencies and
+native SARIF 2.1.0 plus CycloneDX output. Measured at 8.3 s over 100 Python files against Bandit's 4.1 s and
+Semgrep's 44.6 s on the same corpus, with a demo request form in the public showcase.
 `Python` `AST` `OpSec` `SARIF` `Git Hooks`
+
+**[rust-graph](https://github.com/ronisaguey-ux/rust-graph)**
+Code knowledge graph for 42 languages in one static binary, written against the Rust standard library alone —
+no parser library, no `serde`, no `regex`; the SHA-256, the JSON writer and the lexer all live in the repo.
+Deterministic to the byte, memory bounded by spooling facts to disk, and every edge labelled `EXTRACTED` or
+`INFERRED` with ambiguity reported as `unresolved` instead of guessed. Coverage is measured per file rather
+than claimed: 125 / 1,854 JavaScript, 80 / 2,000 TypeScript, 14 / 568 Python and 246 / 1,816 Rust files fall
+back to the lexer, with each remaining difference logged against a reproduction.
+`Rust` `Compiler/Lexer` `Code Graph` `Zero Dependencies`
 
 **[commit-condom](https://github.com/ronisaguey-ux/commit-condom)**
 Pre-push policy gate for coding agents: commit size, file count and secret patterns checked behind a
