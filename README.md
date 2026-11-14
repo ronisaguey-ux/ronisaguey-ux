@@ -46,7 +46,7 @@ a lite edition is being cut for release under AGPL-3.0, and the full edition wil
 `Python` `AST` `OpSec` `SARIF` `Git Hooks`
 
 **[rust-graph](https://github.com/ronisaguey-ux/rust-graph)**
-Code knowledge graph for 42 languages in one static binary, written against the Rust standard library alone —
+Code knowledge graph for 45 languages in one static binary, written against the Rust standard library alone —
 no parser library, no `serde`, no `regex`; the SHA-256, the JSON writer and the lexer all live in the repo.
 Deterministic to the byte, memory bounded by spooling facts to disk, and every edge labelled `EXTRACTED` or
 `INFERRED` with ambiguity reported as `unresolved` instead of guessed. Coverage is measured per file rather
