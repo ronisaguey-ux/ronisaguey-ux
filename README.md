@@ -143,12 +143,12 @@ reliably, it is not ready to run unattended.
 
 ## Stack
 
-Python, JavaScript/Node, TypeScript, Bash, SQL. FastAPI, Flask, Express, React, PostgreSQL, SQLite (WAL),
+Python, Rust, JavaScript/Node, TypeScript, Bash, SQL. FastAPI, Flask, Express, React, PostgreSQL, SQLite (WAL),
 Docker, Linux, systemd, Cloudflare tunnels, git. LLM infrastructure: multi-provider routing and failover, MCP
 servers, RAG and agent memory, prompt and context compression, evaluation harnesses. Computer vision: OpenCV,
 YOLO ONNX, OCR. Browser automation: Puppeteer, CDP.
 
-42 repositories, 30 public. Everything here was designed, implemented, tested and deployed by hand.
+57 repositories, 37 public. Everything here was designed, implemented, tested and deployed by hand.
 
 ## Contact
 
