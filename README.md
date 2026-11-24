@@ -54,6 +54,16 @@ than claimed: 125 / 1,854 JavaScript, 80 / 2,000 TypeScript, 14 / 568 Python and
 back to the lexer, with each remaining difference logged against a reproduction.
 `Rust` `Compiler/Lexer` `Code Graph` `Zero Dependencies`
 
+**[oculus-lite](https://github.com/ronisaguey-ux/oculus-lite)**
+The engineering half of a trading system, published on purpose and cut from the private engine: price/time
+matching core, strict order lifecycle with venue emulation and reconciliation, risk gating (position,
+exposure, daily loss, order rate, kill switch), a bar-by-bar backtester reporting Sharpe, drawdown, win rate
+and expectancy, a paper trader by default and a live path that aborts without explicit flags and credentials,
+and a Flutter dashboard over the ledger. Fifty parameters in one documented YAML file, tuned by hand — no
+optimiser, no genetic search, and none of the proprietary signals or the other 350 parameters. It ships as a
+resume piece and is explicitly untested as a trading system.
+`Rust` `Event-Driven` `Backtesting` `Risk` `Flutter`
+
 **[commit-condom](https://github.com/ronisaguey-ux/commit-condom)**
 Pre-push policy gate for coding agents: commit size, file count and secret patterns checked behind a
 credential-isolating proxy. Found and fixed a silent failure where every default secret pattern was skipped,
